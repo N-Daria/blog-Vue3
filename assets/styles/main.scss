@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Commons-Regular";
+  src: url("/fonts/TTCommons-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  font-family: "Commons-Regular", sans-serif;
+  color: $black;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.6;
+}
