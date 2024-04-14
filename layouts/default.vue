@@ -22,9 +22,9 @@
       </div>
     </header>
 
-    <div class="main">
+    <main class="main">
       <slot />
-    </div>
+    </main>
 
     <footer class="footer">
       <div class="footer__content">
@@ -180,10 +180,9 @@ const openPopup = () => {};
   }
 
   .footer__content {
-    max-width: 1277px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 140px 30px 30px;
+    @include mainBlock;
+    padding-top: 140px;
+    padding-bottom: 30px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

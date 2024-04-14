@@ -1,3 +1,11 @@
 $black: #101010;
 $purple: #e2beff;
 $lightGray: #f3f3f3;
+
+@mixin mainBlock {
+  max-width: 1277px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+}
