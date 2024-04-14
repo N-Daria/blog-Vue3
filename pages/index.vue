@@ -26,12 +26,9 @@ if (!posts.value) {
 <style lang="scss" scoped>
 .articles {
   @include mainBlock;
-  margin: 120px auto;
 
   .articles__header {
-    font-size: 84px;
-    line-height: 100%;
-    margin: 0;
+    @include mainHeader;
   }
 
   .articles__list {

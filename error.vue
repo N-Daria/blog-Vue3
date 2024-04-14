@@ -23,21 +23,20 @@ const handleClearError = () => {
   flex-wrap: wrap;
 
   .error__message {
-    font-size: 112px;
-    line-height: 100%;
-    font-weight: 400;
+    @include mainHeader;
+    display: block;
     width: 100%;
     text-align: center;
-    display: block;
-    margin: 100px auto;
+    text-transform: capitalize;
+    margin: 120px auto;
   }
 
   .error__button {
     border-radius: 999px;
     padding: 30px 50px;
     color: white;
-    font-size: 40px;
-    line-height: 110%;
+    font-size: 30px;
+    line-height: 60%;
     background-color: $black;
   }
 }

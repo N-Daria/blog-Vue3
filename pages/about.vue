@@ -15,13 +15,11 @@
   flex-wrap: wrap;
 
   .about__message {
-    font-size: 112px;
-    line-height: 100%;
-    font-weight: 400;
-    width: 100%;
-    text-align: center;
+    @include mainHeader;
     display: block;
-    margin: 100px auto;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 120px auto;
   }
 }
 </style>
