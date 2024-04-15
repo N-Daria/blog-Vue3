@@ -34,7 +34,7 @@ const handleClearError = () => {
   .error__button {
     border-radius: 999px;
     padding: 30px 50px;
-    color: white;
+    color: $white;
     font-size: 30px;
     line-height: 60%;
     background-color: $black;

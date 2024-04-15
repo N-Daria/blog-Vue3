@@ -25,6 +25,10 @@ a {
   cursor: pointer;
   transition: opacity 0.4s ease;
   text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
 }
 
 button {
@@ -32,9 +36,8 @@ button {
   background-color: transparent;
   cursor: pointer;
   transition: opacity 0.4s ease;
-}
 
-button:hover,
-a:hover {
-  opacity: 0.6;
+  &:hover {
+    opacity: 0.6;
+  }
 }

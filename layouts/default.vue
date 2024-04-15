@@ -162,7 +162,7 @@ const openPopup = () => {};
   .header__popup-button {
     border-radius: 999px;
     padding: 16px 32px;
-    color: white;
+    color: $white;
     font-size: 20px;
     line-height: 100%;
     background-color: $black;
