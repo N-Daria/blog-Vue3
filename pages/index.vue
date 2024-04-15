@@ -3,24 +3,24 @@
     <h1 class="articles__header">Articles</h1>
 
     <ul class="articles__list">
-      <li v-for="p in posts">
+      <li v-for="p in currentPosts">
         <PostCard :post="p" />
       </li>
     </ul>
+
+    <Pagination />
   </div>
 </template>
 
 <script setup>
-const { data: posts } = await useFetch(
-  "https://6082e3545dbd2c001757abf5.mockapi.io/qtim-test-work/posts"
-);
-if (!posts.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: "not found",
-    fatal: true,
-  });
-}
+import { storeToRefs } from "pinia";
+import { usePostsStore } from "~/store/posts";
+
+const store = usePostsStore();
+const { fetchPosts, showCurrentPosts } = store;
+const { posts, currentPosts, totalPages } = storeToRefs(store);
+
+await fetchPosts();
 </script>
 
 <style lang="scss" scoped>
@@ -32,7 +32,7 @@ if (!posts.value) {
   }
 
   .articles__list {
-    margin: 60px 0 70px;
+    margin: 60px 0 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     justify-content: space-between;
